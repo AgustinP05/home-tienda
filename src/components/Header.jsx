@@ -59,7 +59,7 @@ const Header = () => {
             </a>
 
             {/* Carrito sin notificación */}
-            <a href="#" className="text-gray-700 hover:text-blue-500">
+            <a href="#" className="text-[#5E5E5E] ">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
