@@ -3,11 +3,10 @@ import React from "react";
 // Importa los estilos de Swiper
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay"; // Importa el estilo de autoplay
-// Importa los módulos de Swiper que necesites
+import "swiper/css/autoplay";
+// Importa los módulos de Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import {  Pagination, Autoplay } from "swiper/modules"; // Agrega Autoplay
-
+import {  Pagination, Autoplay } from "swiper/modules"; 
 const Carrusel = () => {
   return (
     <div className=" w-full mt-2">
