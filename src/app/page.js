@@ -1,6 +1,7 @@
 
 import Header from "@/components/Header";
 import Carrusel from "@/components/Carrusel";
+import Tendencias from "@/components/Tendencias";
 
 export default function Home() {
   return (
@@ -9,6 +10,8 @@ export default function Home() {
        <Header/>
 
        <Carrusel/>
+
+       <Tendencias/>
       </main>
       
     
