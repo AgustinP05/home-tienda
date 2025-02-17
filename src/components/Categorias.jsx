@@ -39,10 +39,17 @@ const Categorias = () => {
         </div>
 
         {/* Mobile */}
-        <div className="block md:hidden w-full  text-[#FFFFFF] font-extrabold text-4xl custom-swiper-categorias">
+        <div className="block md:hidden w-full  text-[#FFFFFF] font-extrabold text-4xl custom-swiper-pagination-categorias custom-swiper-categorias">
 
         <style>
             {`
+            .custom-swiper-pagination-categorias .swiper-pagination {
+               
+                bottom: -3px ; /* Mueve la paginación un poco más abajo */ 
+                /*background-color:red;*/
+              }
+
+
             .custom-swiper-categorias .swiper-pagination-bullet {
                 background: transparent; /* Fondo transparente para los puntos inactivos */
                 border: 2px solid #000000; /* Borde blanco para los puntos inactivos */
@@ -97,7 +104,7 @@ const Categorias = () => {
             <a href="#" className="w-full h-full flex items-center justify-center p-4 uppercase bg-[url('/pelotas.jpg')] bg-cover bg-center bg-no-repeat">
                <span>Pelotas</span> 
             </a>
-            <span className="block bg-white w-full h-[20px]"></span>
+            <span className="block bg-transparent w-full h-[20px]"></span>
             </div>
             </SwiperSlide>
             
