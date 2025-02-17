@@ -43,12 +43,12 @@ const MasVendidas = () => {
 
             .custom-swiper-vendidas .swiper-pagination-bullet {
                 background: transparent; /* Fondo transparente para los puntos inactivos */
-                border: 2px solid #000000; /* Borde blanco para los puntos inactivos */
+                border: 2px solid #DC1E0F; /* Borde blanco para los puntos inactivos */
                 opacity: 1;
                    
               }
               .custom-swiper-vendidas .swiper-pagination-bullet-active {
-                background-color: black;
+                background-color: #DC1E0F;
               }
             `}
         </style>
@@ -143,7 +143,7 @@ const MasVendidas = () => {
       >
         {/* Mapear las tarjetas de tendencias */}
         {tendencias.map((tendencia) => (
-          <SwiperSlide key={tendencia.id} className="shadow-md shadow-slate-300 sm:h-[388px]">
+          <SwiperSlide key={tendencia.id} className="shadow-md shadow-slate-300 rounded-2xl  sm:h-[388px]">
             <div className="flex flex-col justify-between items-center    sm:rounded-md overflow-hidden h-[233px] sm:h-96 md:px-8 pt-4 pb-2 sm:py-6">
               {/* Imagen de la tarjeta */}
               <img
