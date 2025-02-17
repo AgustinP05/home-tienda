@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-const Tendencias = () => {
+const MasVendidas = () => {
   // Referencias para los botones de navegación
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
@@ -29,29 +29,36 @@ const Tendencias = () => {
   ];
 
   return (
-    <div className="container h-[380px] sm:h-auto mx-auto mt-10 sm:mt-20 px-4 md:px-16 py-11 bg-[#DC1E0F] relative custom-swiper-pagination-tendencias">
+    <div className="container  h-[380px] sm:h-auto mx-auto mt-10 sm:mt-20 px-4 md:px-16 py-11  relative custom-swiper-pagination-vendidas custom-swiper-vendidas">
       
       <style>
             {`
-             .custom-swiper-pagination-tendencias .swiper-pagination {
+             .custom-swiper-pagination-vendidas .swiper-pagination {
                 position: relative !important; /* Hace que la paginación sea absoluta */
                 bottom: -8px ; /* Mueve la paginación un poco más abajo */
                 left: 50% !important; /* Centra horizontalmente */
                 transform: translateX(-50%) !important; /* Ajusta el centrado */
                 z-index: 10 !important; /* Asegura que la paginación esté por encima del contenido */
               }
+
+            .custom-swiper-vendidas .swiper-pagination-bullet {
+                background: transparent; /* Fondo transparente para los puntos inactivos */
+                border: 2px solid #000000; /* Borde blanco para los puntos inactivos */
+                opacity: 1;
+                   
+              }
+              .custom-swiper-vendidas .swiper-pagination-bullet-active {
+                background-color: black;
+              }
             `}
         </style>
       
-      
-      
-      
-      <h2 className="text-[24px] md:text-[32px] text-[#FFFFFF] font-extrabold mb-10 uppercase italic">Tendencias</h2>
+      <h2 className="text-[24px] md:text-[32px] font-extrabold mb-10 uppercase italic">Los mas vendidas</h2>
 
       {/* Botones de navegación personalizados (ocultos en mobile) */}
       <button
         ref={navigationPrevRef}
-        className="hidden md:block absolute left-11 top-[57%] transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100"
+        className="hidden md:block absolute left-11 top-[57%] transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-2xl drop-shadow-md hover:bg-gray-100"
       >
         {/* Ícono de flecha izquierda*/}
         <svg
@@ -72,7 +79,7 @@ const Tendencias = () => {
 
       <button
         ref={navigationNextRef}
-        className="hidden md:block absolute right-11 top-[57%] transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100"
+        className="hidden md:block absolute right-11 top-[57%] transform -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow-2xl drop-shadow-md hover:bg-gray-100"
       >
         {/* Ícono de flecha derecha*/}
         <svg
@@ -93,7 +100,7 @@ const Tendencias = () => {
 
       {/* Carrusel de Swiper */}
       <Swiper
-      className="custom-swiper" 
+      
         modules={[Navigation, Pagination]}
         spaceBetween={20}
         slidesPerView={5}
@@ -136,8 +143,8 @@ const Tendencias = () => {
       >
         {/* Mapear las tarjetas de tendencias */}
         {tendencias.map((tendencia) => (
-          <SwiperSlide key={tendencia.id}>
-            <div className="flex flex-col justify-between items-center bg-white shadow-md rounded-xl sm:rounded-md overflow-hidden h-[233px] sm:h-96 md:px-8 pt-4 pb-2 sm:py-6">
+          <SwiperSlide key={tendencia.id} className="shadow-md shadow-slate-300 sm:h-[388px]">
+            <div className="flex flex-col justify-between items-center    sm:rounded-md overflow-hidden h-[233px] sm:h-96 md:px-8 pt-4 pb-2 sm:py-6">
               {/* Imagen de la tarjeta */}
               <img
                 src={tendencia.imagen}
@@ -164,54 +171,18 @@ const Tendencias = () => {
                   Comprar
                 </a>
               </div>
+             
             </div>
+           
           </SwiperSlide>
+          
         ))}
-        <span className="block md:hidden bg-transparent w-full h-[20px]"></span>
+         <span className="block md:hidden bg-transparent w-full h-[20px]"></span>
       </Swiper>
 
-      {/* Estilos generales personalizados para la paginación */}
-      <style jsx global>{`
-        
-        .swiper-pagination {
-          position: absolute !important; /* Hace que la paginación sea absoluta */
-          bottom: -3px ; /* Mueve la paginación un poco más abajo */
-          left: 50% !important; /* Centra horizontalmente */
-          transform: translateX(-50%) !important; /* Ajusta el centrado */
-          z-index: 10 !important; /* Asegura que la paginación esté por encima del contenido */
-          /*background-color:blue;*/
-        }
-
-        .swiper-pagination-bullet {
-          background: transparent; /* Fondo transparente para los puntos inactivos */
-          border: 2px solid #FFFFFF; /* Borde blanco para los puntos inactivos */
-          opacity: 1; /* Asegúrate de que los puntos sean visibles */
-          width: 10px; /* Ancho del punto */
-          height: 10px; /* Alto del punto */
-        }
-
-        .swiper-pagination-bullet-active {
-          background: #FFFFFF; /* Fondo blanco para el punto activo */
-          border: 2px solid #FFFFFF; /* Borde blanco para el punto activo */
-        }
-
-        @media (max-width: 640px) {
-          /*.custom-swiper {
-            /*overflow: visible !important;*/ /* Desactiva el overflow hidden */
-          }*/
-
-          .swiper-pagination {
-            
-            bottom: -1px !important; /* Mueve la paginación un poco más abajo */
-               
-          }
-
-        }
-       
-      `}</style>
-      
+     
     </div>
   );
 };
 
-export default Tendencias;
+export default MasVendidas;

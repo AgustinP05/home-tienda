@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Carrusel from "@/components/Carrusel";
 import Tendencias from "@/components/Tendencias";
 import Categorias from "@/components/Categorias";
+import MasVendidas from "@/components/MasVendidas";
 
 export default function Home() {
   return (
@@ -15,6 +16,8 @@ export default function Home() {
        <Tendencias/>
 
        <Categorias/>
+
+       <MasVendidas/>
       </main>
       
     

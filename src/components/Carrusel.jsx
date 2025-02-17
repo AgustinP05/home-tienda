@@ -9,7 +9,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {  Pagination, Autoplay } from "swiper/modules"; 
 const Carrusel = () => {
   return (
-    <div className=" w-full mt-2">
+    <div className=" w-full mt-2 custom-swiper-pagination-carrusel">
+
+        <style>
+            {`
+            .custom-swiper-pagination-carrusel .swiper-pagination {
+                position: absolute !important; /* Hace que la paginación sea absoluta */
+                bottom: -3px ; /* Mueve la paginación un poco más abajo */
+                left: 50% !important; /* Centra horizontalmente */
+                transform: translateX(-50%) !important; /* Ajusta el centrado */
+                z-index: 10 !important; /* Asegura que la paginación esté por encima del contenido */
+                /*background-color:red;*/
+              }
+            `}
+        </style>
+
       <Swiper
         // Configuración básica de Swiper
         modules={[Pagination, Autoplay]} 
