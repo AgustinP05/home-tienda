@@ -4,7 +4,7 @@ import React, { useState } from "react";
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className=" bg-white h-[121px] py-[14px] w-full">
+    <header className=" bg-white h-[121px] py-[14px] 2xl:px-60 w-full">
         {/* Menu desktop */}
         <div className="hidden md:block">
         <div className=" mx-auto flex items-center justify-between px-[70px] mb-[34px]">
