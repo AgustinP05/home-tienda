@@ -4,6 +4,7 @@ import Carrusel from "@/components/Carrusel";
 import Tendencias from "@/components/Tendencias";
 import Categorias from "@/components/Categorias";
 import MasVendidas from "@/components/MasVendidas";
+import Informacion from "@/components/Informacion";
 
 export default function Home() {
   return (
@@ -18,6 +19,8 @@ export default function Home() {
        <Categorias/>
 
        <MasVendidas/>
+
+       <Informacion/>
       </main>
       
     
